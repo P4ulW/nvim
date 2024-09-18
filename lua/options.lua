@@ -1,4 +1,7 @@
 require "nvchad.options"
+require("nvim-tree").setup({
+    view={side="right"}
+  })
 
 -- add yours here!
 

@@ -32,14 +32,31 @@ return {
   {
     "nvim-lua/plenary.nvim",
   },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    'vskrishna1082/vim-cytosim',
+    lazy=false,
+  },
+  {
+    'stevearc/aerial.nvim',
+    lazy = false,
+    opts = {},
+    -- Optional dependencies
+    dependencies = {
+       "nvim-treesitter/nvim-treesitter",
+       "nvim-tree/nvim-web-devicons"
+    },
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim", "lua", "vimdoc",
+        "html", "css"
+      },
+    },
+  },
+  {
+    "chadvoegele/nvim-slime",
+    ft={"python"},
+  }
 }
