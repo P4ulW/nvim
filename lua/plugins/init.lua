@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+  -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
   },
 
@@ -67,5 +67,11 @@ return {
       vim.g.slime_bracketed_paste = 1
     end,
   },
-
+  {
+    "lervag/vimtex",
+    lazy = false,     -- we don't want to lazy load VimTeX
+    config = function()
+       vim.g.vimtex_view_general_viewer = 'okular'
+    end,
+  },
 }
