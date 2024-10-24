@@ -74,4 +74,12 @@ return {
        vim.g.vimtex_view_general_viewer = 'okular'
     end,
   },
+  {
+      'MeanderingProgrammer/render-markdown.nvim',
+      dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
+      ---@module 'render-markdown'
+      ---@type render.md.UserConfig
+      opts = {},
+      lazy=false,
+  }
 }
