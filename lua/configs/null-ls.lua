@@ -21,6 +21,15 @@ local opts = {
           vim.lsp.buf.format({bufnr = bufnr})
         end,
       })
+      vim.diagnostic.config({
+          virtualtext = true,
+          severity_highlights = {
+            Error = { hl = "DiagnosticError" },
+            Warning = { hl = "DiagnosticWarning" },
+            Information = { hl = "DiagnosticInfo" },
+            Hint = { hl = "DiagnosticHint" },
+          },
+        })
     end
   end,
 }

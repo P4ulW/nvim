@@ -81,5 +81,5 @@ return {
       ---@type render.md.UserConfig
       opts = {},
       lazy=false,
-  }
+  },
 }
