@@ -14,5 +14,6 @@ map("n", "<leader>gg", "<cmd> LazyGit <CR>")
 map('i', '<C-BS>', '<C-W>', {noremap = true})
 map('i', '<C-Del>', '<Esc>vedi', {noremap = true})
 
+map('n', '<leader>a', ':AerialToggle!<CR>')
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
