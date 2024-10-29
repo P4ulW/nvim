@@ -1,0 +1,33 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Fitting with lmfit": {
+		"scope": "python",
+		"prefix": "lm_fitting",
+		"body": [
+			"# fiting $name"
+			"x_vals_$name  = $1",
+			"y_vals_$name  = $2",
+
+			"model_$name = Model($3)",
+			"params_$name = Parameters()",
+			"params_$name.add()",
+			"result_$name = model_$name.fit(y_vals_$name, params_$name, x=x_vals_$name)",
+			"report_fit(result_$name)",
+			"",
+			"# plotting",
+			"x_vals_cont_$name = $5",
+			"y_vals_cont_$name = model_$name.eval(result_$name.params,x=x_vals_cont_$name)",
+			"fig, ax = plt.subplots(1,1, figsize=(3,3))",
+			"ax.plot(x_vals_$name, y_vals_$name)",
+			"ax.plot(x_vals_cont_$name, y_vals_cont_$name)",
+			"fig.show()"
+		],
+		"description": "Generate a model from function and setup basic fit environment, fit and plot results"
+	}
+}
