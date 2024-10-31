@@ -1,7 +1,10 @@
 return {
   {
     "rcarriga/nvim-dap-ui",
-    dependencies = "mfussenegger/nvim-dap",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio"
+    },
     config = function ()
       local dap = require("dap")
       local dapui = require("dapui")
@@ -19,7 +22,6 @@ return {
   {
     "mfussenegger/nvim-dap",
     config = function(_, opts)
-      require("core.utils").load_mappings("dap")
     end    
   },
   {
@@ -32,7 +34,6 @@ return {
     config = function (_, opts)
       local path = "~/.local/share/nvim/mason/packages/venv/bin/python"
       require("dap-python").setup(path)
-      require("core.utils").load_mappings("dap_python")
     end,
   },
   {
