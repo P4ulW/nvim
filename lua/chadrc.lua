@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "monochrome",
+	theme = "catppuccin",
 
 	hl_override = {
 		Comment = { italic = true , bold=true},
@@ -22,5 +22,6 @@ M.base46 = {
 
 	},
 }
+M.mappings = require "mappings"
 
 return M

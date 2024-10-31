@@ -1,5 +1,51 @@
 return {
   {
+    "rcarriga/nvim-dap-ui",
+    dependencies = "mfussenegger/nvim-dap",
+    config = function ()
+      local dap = require("dap")
+      local dapui = require("dapui")
+      dapui.setup()
+      dap.listeners.after.event_initialized["dapui_config"] = function ()
+        dapui.open()
+      end
+      dap.listeners.after.event_terminated["dapui_config"] = function ()
+        dapui.close()
+      end
+      dap.listeners.after.event_exited["dapui_config"] = function ()
+      end
+    end
+  },
+  {
+    "mfussenegger/nvim-dap",
+  },
+  {
+    "mfussenegger/nvim-dap-python",
+    ft="python",
+    dependencies={
+      "rcarriga/nvim-dap-ui",
+      "mfussenegger/nvim-dap",
+    },
+    config = function (_, opts)
+      local path = "~/.local/share/nvim/mason/packages/venv/bin/python"
+      require("dap-python").setup(path)
+    end,
+  },
+  {
+    'williamboman/mason.nvim',
+    opts = {
+      ensure_installed = {
+        "autopep8",
+        "debugpy",
+        "mypy",
+        "ruff",
+        "pyright",
+        "ruff_lsp",
+        "black",
+      }
+    }
+  },
+  {
     "stevearc/conform.nvim",
   -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",

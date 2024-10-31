@@ -34,3 +34,4 @@ vim.cmd("highlight DiagnosticHint guifg=green guibg=white")
 
 -- local o = vim.o
 vim.o.cursorlineopt ='both' -- to enable cursorline!
+vim.o.shell = 'pwsh'
