@@ -16,6 +16,26 @@ map('i', '<C-Del>', '<Esc>vedi', {noremap = true})
 
 map('n', '<leader>a', ':AerialToggle!<CR>')
 
+map('n', '<leader>rf', function ()
+    local ft = vim.bo.filetype
+    local file = vim.fn.expand('%')
+    if ft == 'python' then
+      require('nvchad.term').runner {
+        pos = 'float',
+        cmd = 'python ' .. file,
+        id = 'floatTerm',
+      }
+    end
+    if ft == 'c' then
+      require('nvchad.term').runner {
+        pos = 'float',
+        cmd = 'clear && gcc -o out ' .. file .. ' && ./out',
+        id = 'floatTerm',
+      }
+    end
+  end,
+  {desc='run file in terminal'})
+
 local M = {}
 M.dap = {
   plugin = true,

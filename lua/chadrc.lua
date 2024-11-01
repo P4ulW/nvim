@@ -19,8 +19,10 @@ M.base46 = {
     DiagnosticWarn = {italic=true, bg="lightbg"},
     DiagnosticHint = {italic=true, bg="lightbg"},
     DiagnosticInfo = {italic=true, bg="lightbg"},
-
 	},
+}
+M.nvdash = {
+  load_on_startup = true,
 }
 M.mappings = require "mappings"
 
