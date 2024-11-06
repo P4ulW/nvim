@@ -1,0 +1,9 @@
+{
+    "slide break": {
+        "prefix": "new_slide",
+        "body": [
+            "[comment] # (!!!)"
+        ],
+        "description": "Add a slide break comment for mdslides"
+    }
+}

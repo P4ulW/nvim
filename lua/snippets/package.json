@@ -1,0 +1,23 @@
+{
+  "name": "custom-snippets",
+  "contributes": {
+      "snippets": [
+      {
+          "language": [
+              "plaintext",
+              "markdown",
+              "tex",
+              "html",
+              "global",
+              "all",
+              "luad"
+          ],
+          "path": "./global.json"
+      },
+      {
+        "language": "markdown",
+        "path" : "./markdown.json"
+      }
+    ]
+  }
+}

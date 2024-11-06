@@ -21,6 +21,7 @@ M.base46 = {
     DiagnosticInfo = {italic=true, bg="lightbg"},
 	},
 }
+
 M.nvdash = {
   load_on_startup = true,
   header= {
@@ -39,5 +40,4 @@ M.nvdash = {
   },
 }
 M.mappings = require("mappings")
-
 return M

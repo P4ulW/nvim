@@ -19,11 +19,13 @@ return {
       end
     end
   },
+
   {
     "mfussenegger/nvim-dap",
     config = function(_, opts)
     end    
   },
+
   {
     "mfussenegger/nvim-dap-python",
     ft="python",
@@ -36,6 +38,7 @@ return {
       require("dap-python").setup(path)
     end,
   },
+
   {
     'williamboman/mason.nvim',
     opts = {
@@ -50,19 +53,20 @@ return {
       }
     }
   },
+
   {
     "stevearc/conform.nvim",
   -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
     end,
   },
+
   {
     "jose-elias-alvarez/null-ls.nvim",
     ft = {"python"},
@@ -70,23 +74,28 @@ return {
       return require "configs.null-ls"
     end,
   },
+
   {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
+
   {
     "kdheepak/lazygit.nvim",
     cmd = {
       "LazyGit",
     }
   },
+
   {
     "nvim-lua/plenary.nvim",
   },
+
   {
     'vskrishna1082/vim-cytosim',
     lazy=false,
   },
+
   {
     'stevearc/aerial.nvim',
     lazy = false,
@@ -97,6 +106,7 @@ return {
        "nvim-tree/nvim-web-devicons"
     },
   },
+
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
@@ -106,10 +116,12 @@ return {
       },
     },
   },
+
   {
     "chadvoegele/nvim-slime",
     ft={"python"},
   },
+
   {
     'jpalardy/vim-slime',
     config = function()
@@ -118,6 +130,7 @@ return {
       vim.g.slime_bracketed_paste = 1
     end,
   },
+
   {
     "lervag/vimtex",
     lazy = false,     -- we don't want to lazy load VimTeX
@@ -125,6 +138,7 @@ return {
        vim.g.vimtex_view_general_viewer = 'okular'
     end,
   },
+
   {
       'MeanderingProgrammer/render-markdown.nvim',
       dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
