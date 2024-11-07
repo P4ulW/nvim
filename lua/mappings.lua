@@ -15,6 +15,7 @@ map('i', '<C-BS>', '<C-W>', {noremap = true})
 map('i', '<C-Del>', '<Esc>vedi', {noremap = true})
 
 map('n', '<leader>a', ':AerialToggle!<CR>')
+map('n', '<C-p>', 'vip')
 
 map('n', '<leader>rf', function ()
     local ft = vim.bo.filetype
