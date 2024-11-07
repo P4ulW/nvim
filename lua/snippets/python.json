@@ -1,0 +1,69 @@
+
+{
+	"inverse angstrom str": {
+		"prefix": "inverse_angstrom",
+		"body": [
+			"$\\mathrm{\\AA}^{-1}$"
+		],
+		"description": "Log output to console"
+	},
+
+	"Create a cbar inset for mpl figure": {
+		"prefix": "cbar_ax_inset",
+		"body": [
+			"$ax_name = $target_ax.inset_axes([$x0, $y0, $dx, $dy])",
+			"fig.colorbar($mappable, $ax_name, $target_ax)",
+			"$ax_name.set_yticks([])",
+			"$ax_name.set_ylabel(\"Intensity\", labelpad=1)",
+			"$ax_name.text(0.5, 1.08, \"Max\", va=\"center_baseline\", ha=\"center\", transform=$ax_name.transAxes)",
+			"$ax_name.text(0.5, -.08, \"Min\", va=\"center_baseline\", ha=\"center\", transform=$ax_name.transAxes)"],
+		"description": "Create a cbar inset for mpl figure for mappable im and axis ax"
+	},
+
+	"if __name__ == __main__": {
+		"scope": "python",
+		"prefix": "if __name__",
+		"body": [
+			"if __name__ == \"__main__\":",
+			"\t$1",
+			"\tpass"
+		],
+		"description": "write main exec body"
+	},
+
+	"Fitting with lmfit": {
+		"scope": "python",
+		"prefix": "lm_fitting",
+		"body": [
+			"x_vals_$name  = $1",
+			"y_vals_$name  = $2",
+
+			"model_$name = Model($3)",
+			"params_$name = Parameters()",
+			"params_$name.add()",
+			"result_$name = model_$name.fit(y_vals_$name, params_$name, x=x_vals_$name)",
+			"report_fit(result_$name)",
+			"",
+			"# plotting",
+			"x_vals_cont_$name = $5",
+			"y_vals_cont_$name = model_$name.eval(result_$name.params,x=x_vals_cont_$name)",
+			"fig, ax = plt.subplots(1,1, figsize=(3,3))",
+			"ax.plot(x_vals_$name, y_vals_$name)",
+			"ax.plot(x_vals_cont_$name, y_vals_cont_$name)",
+			"fig.show()"
+		],
+		"description": "Generate a model from function and setup basic fit environment, fit and plot results"
+	},
+
+	"standard python imports": {
+		"scope": "python",
+		"prefix": "standard-imports",
+		"body": [
+			"import numpy as np",
+			"import matplotlib.pyplot as plt",
+			"from rich import print",
+			"from glob import glob"
+		],
+		"description": "Shortcut for standard python imports"
+	}
+}
