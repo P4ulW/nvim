@@ -4,21 +4,20 @@
 -- x -
 ---@type ChadrcConfig
 local M = {}
-
 M.base46 = {
 	theme = "catppuccin",
 
 	hl_override = {
 		Comment = { italic = true , bold=true},
-		["@comment"] = { italic = true},
+		["@comment"] = { italic = true , fg='#64D3EA'},
     Error = {italic = true},
     ErrorMsg = {italic=true},
     Warning = {italic = true},
     WarningMsg = {italic=true},
-    DiagnosticError = {italic=true, bg="lightbg"},
-    DiagnosticWarn = {italic=true, bg="lightbg"},
-    DiagnosticHint = {italic=true, bg="lightbg"},
-    DiagnosticInfo = {italic=true, bg="lightbg"},
+    DiagnosticError = {italic=true, bg="#570F0E"},
+    DiagnosticWarn = {italic=true, bg="#332700"},
+    DiagnosticHint = {italic=true, bg="#103A3C"},
+    DiagnosticInfo = {italic=true, bg="#0F3856"},
 	},
 }
 
