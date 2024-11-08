@@ -1,5 +1,12 @@
 
 {
+  "fstring": {
+    "prefix": "fstring",
+    "body": [
+      "f\'$1\'"],
+		"description": "fstring formatting"
+  },
+
 	"inverse angstrom str": {
 		"prefix": "inverse_angstrom",
 		"body": [
