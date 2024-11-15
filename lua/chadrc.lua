@@ -8,8 +8,10 @@ M.base46 = {
 	theme = "catppuccin",
   transparency=true,
 	hl_override = {
-		Comment = { italic = true , bold=true},
-		["@comment"] = { italic = true , fg='#64D3EA'},
+    CurSearch = {fg='#1e1d2d', bg='#ff4558'},
+    Search = {fg='#1e1d2d',bg='#d9e0ee'},
+    Comment = {italic=true , bold=true},
+		["@comment"] = {italic=true , fg='#64D3EA'},
     Error = {italic = true},
     ErrorMsg = {italic=true},
     Warning = {italic = true},
