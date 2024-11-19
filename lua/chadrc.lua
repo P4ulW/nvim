@@ -10,7 +10,7 @@ M.base46 = {
 	hl_override = {
     CurSearch = {fg='#1e1d2d', bg='#ff4558'},
     Search = {fg='#1e1d2d',bg='#d9e0ee'},
-    Comment = {italic=true , bold=true},
+    Comment = {italic=true},
 		["@comment"] = {italic=true , fg='#64D3EA'},
     Error = {italic = true},
     ErrorMsg = {italic=true},
