@@ -1,7 +1,6 @@
 -- This file needs to have same structure as nvconfig.lua 
 -- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
 -- Please read that file to know all available options :( 
--- x -
 ---@type ChadrcConfig
 local M = {}
 M.base46 = {
@@ -11,6 +10,13 @@ M.base46 = {
     CurSearch = {fg='#1e1d2d', bg='#ff4558'},
     Search = {fg='#1e1d2d',bg='#d9e0ee'},
     Comment = {italic=true},
+    Boolean = {italic=true, bold=true},
+    properties = { italic=true},
+    Keyword = { italic=true },
+    ["@keyword"] = { italic=true },
+    Operators = { bold=true },
+    Conditional = { italic=true },
+    Loop = { italic=true },
 		["@comment"] = {italic=true , fg='#64D3EA'},
     Error = {italic = true},
     ErrorMsg = {italic=true},
@@ -40,5 +46,4 @@ M.nvdash = {
     "      ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ",
   },
 }
-M.mappings = require("mappings")
 return M

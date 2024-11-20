@@ -1,4 +1,3 @@
-
 {
   "fstring": {
     "prefix": "fstring",
@@ -28,7 +27,6 @@
 	},
 
 	"if __name__ == __main__": {
-		"scope": "python",
 		"prefix": "if __name__",
 		"body": [
 			"if __name__ == \"__main__\":",
@@ -39,7 +37,6 @@
 	},
 
 	"Fitting with lmfit": {
-		"scope": "python",
 		"prefix": "lm_fitting",
 		"body": [
 			"x_vals_$name  = $1",
@@ -63,7 +60,6 @@
 	},
 
 	"standard python imports": {
-		"scope": "python",
 		"prefix": "standard-imports",
 		"body": [
 			"import numpy as np",

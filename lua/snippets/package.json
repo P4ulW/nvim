@@ -19,7 +19,7 @@
         "path" : "./markdown.json"
       },
       {
-        "language": "python",
+        "language": "all",
         "path" : "./python.json"
       }
     ]
