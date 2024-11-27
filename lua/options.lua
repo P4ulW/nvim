@@ -19,6 +19,9 @@ vim.opt.scrolloff = 10
 vim.opt.spell = true
 vim.opt.spelllang = "en"
 vim.opt.relativenumber = true
+vim.opt.breakindent = true
+vim.opt.showbreak = '...'
+
 -- add yours here!
 
 -- local o = vim.o
