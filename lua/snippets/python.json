@@ -2,7 +2,8 @@
   "fstring": {
     "prefix": "fstring",
     "body": [
-      "f\'$1\'"],
+      "f\"$1\""
+    ],
 		"description": "fstring formatting"
   },
 
@@ -17,12 +18,13 @@
 	"Create a cbar inset for mpl figure": {
 		"prefix": "cbar_ax_inset",
 		"body": [
-			"$ax_name = $target_ax.inset_axes([$x0, $y0, $dx, $dy])",
-			"fig.colorbar($mappable, $ax_name, $target_ax)",
-			"$ax_name.set_yticks([])",
-			"$ax_name.set_ylabel(\"Intensity\", labelpad=1)",
-			"$ax_name.text(0.5, 1.08, \"Max\", va=\"center_baseline\", ha=\"center\", transform=$ax_name.transAxes)",
-			"$ax_name.text(0.5, -.08, \"Min\", va=\"center_baseline\", ha=\"center\", transform=$ax_name.transAxes)"],
+			"${1:ax_name} = ${2:target_ax}.inset_axes([${3:x0}, ${4:y0}, ${5:dx}, ${6:dy}])",
+			"fig.colorbar(${7:mappable}, ${1:ax_name}, ${2:target_ax})",
+			"${1:ax_name}.set_yticks([])",
+			"${1:ax_name}.set_ylabel(\"Intensity\", labelpad=1)",
+			"${1:ax_name}.text(0.5, 1.08, \"Max\", va=\"center_baseline\", ha=\"center\", transform=${1:ax_name}.transAxes)",
+			"${1:ax_name}.text(0.5, -.08, \"Min\", va=\"center_baseline\", ha=\"center\", transform=${1:ax_name}.transAxes)"
+    ],
 		"description": "Create a cbar inset for mpl figure for mappable im and axis ax"
 	},
 

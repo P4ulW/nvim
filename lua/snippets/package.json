@@ -15,11 +15,16 @@
           "path": "./global.json"
       },
       {
-        "language": ["markdown"],
+        "language": ["markdown, md"],
         "path" : "./markdown.json"
       },
       {
-        "language": ["python"],
+        "language": [
+          "python",
+          "py",
+          "all",
+          "global"
+        ],
         "path" : "./python.json"
       }
     ]
