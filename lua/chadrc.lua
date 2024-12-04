@@ -4,7 +4,7 @@
 ---@type ChadrcConfig
 local M = {}
 M.base46 = {
-	theme = "rosepine",
+	theme = "catppuccin",
   transparency=true,
 	hl_override = {
     CurSearch = {fg='#1e1d2d', bg='#ff4558'},
