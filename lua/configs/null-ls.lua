@@ -22,14 +22,14 @@ local opts = {
         end,
       })
       vim.diagnostic.config({
-          virtualtext = true,
-          severity_highlights = {
-            Error = { hl = "DiagnosticError" },
-            Warning = { hl = "DiagnosticWarning" },
-            Information = { hl = "DiagnosticInfo" },
-            Hint = { hl = "DiagnosticHint" },
-          },
-        })
+        virtualtext = false,
+        severity_highlights = {
+          Error = { hl = "DiagnosticError" },
+          Warning = { hl = "DiagnosticWarning" },
+          Information = { hl = "DiagnosticInfo" },
+          Hint = { hl = "DiagnosticHint" },
+        },
+      })
     end
   end,
 }

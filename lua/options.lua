@@ -21,6 +21,7 @@ vim.opt.spelllang = "en"
 vim.opt.relativenumber = true
 vim.opt.breakindent = true
 vim.opt.showbreak = '...'
+vim.opt.colorcolumn = '80'
 
 -- add yours here!
 

@@ -4,7 +4,7 @@
 ---@type ChadrcConfig
 local M = {}
 M.base46 = {
-	theme = "catppuccin",
+	theme = "rosepine",
   transparency=true,
 	hl_override = {
     CurSearch = {fg='#1e1d2d', bg='#ff4558'},
@@ -18,6 +18,8 @@ M.base46 = {
     Conditional = { italic=true },
     Loop = { italic=true },
 		["@comment"] = {italic=true , fg='#64D3EA'},
+    ['@punctuation.bracket'] = {fg='#9ccfd8'},
+    ['@punctuation.delimiter'] = {fg='#bbbbbb'},
     Error = {italic = true},
     ErrorMsg = {italic=true},
     Warning = {italic = true},
