@@ -7,6 +7,7 @@ return {
     },
     config = function()
       require('telescope').setup {
+        theme = 'ivy',
         file_ignore_patterns = {
           ".git/", ".cache", "%.o", "%.a",
           "%.out", "%.pdf", "%.mkv", "%.mp4",
