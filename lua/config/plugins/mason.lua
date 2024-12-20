@@ -2,7 +2,17 @@ return {
   {
     "williamboman/mason.nvim",
     config = function()
-      require("mason").setup()
+      require("mason").setup({
+        ensure_installed = {
+          "autopep8",
+          "debugpy",
+          "mypy",
+          "ruff",
+          "pyright",
+          "ruff_lsp",
+          "black",
+        }
+      })
     end,
   },
   {

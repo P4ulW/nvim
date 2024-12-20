@@ -1,0 +1,23 @@
+{
+    "slide break": {
+        "prefix": "new_slide",
+        "body": [
+            "[comment]: # (!!!)"
+        ],
+        "description": "Add a slide break comment for mdslides"
+    },
+    "add animates slide break": {
+        "prefix": "animate_break",
+        "body": [
+            "[comment]: # (!!! data-auto-animate)"
+        ],
+        "description": "animate the following slide break using revealjs"
+    },
+    "image sizing tag": {
+        "prefix": "image_scale_tag",
+        "body": [
+            "<!-- .element: style=\"height:40vh; image-rendering: crisp-edges;\" -->"
+        ],
+        "description": "css tag for scaling image in revealjs"
+    }
+}

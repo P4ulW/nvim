@@ -1,0 +1,32 @@
+{
+  "name": "custom-snippets",
+  "contributes": {
+      "snippets": [
+      {
+          "language": [
+              "plaintext",
+              "markdown",
+              "tex",
+              "html",
+              "global",
+              "all",
+              "lua"
+          ],
+          "path": "./global.json"
+      },
+      {
+        "language": ["markdown, md"],
+        "path" : "./markdown.json"
+      },
+      {
+        "language": [
+          "python",
+          "py",
+          "all",
+          "global"
+        ],
+        "path" : "./python.json"
+      }
+    ]
+  }
+}
