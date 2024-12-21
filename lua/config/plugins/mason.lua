@@ -1,21 +1,17 @@
 return {
   {
     "williamboman/mason.nvim",
+    dependencies = {
+      "williamboman/mason-lspconfig.nvim",
+    },
     config = function()
-      require("mason").setup({
+      require("mason").setup()
+      require("mason-lspconfig").setup({
         ensure_installed = {
-          "autopep8",
-          "debugpy",
-          "mypy",
-          "ruff",
           "pyright",
-          "ruff_lsp",
-          "black",
+          "lua_ls"
         }
       })
     end,
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
   },
 }

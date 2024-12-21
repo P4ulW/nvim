@@ -64,6 +64,8 @@ set.spelllang      = "en"
 set.relativenumber = true
 set.breakindent    = true
 set.showbreak      = '...'
+set.signcolumn     = 'yes:2'
+set.colorcolumn    = '80'
 
 
 -- set pwsh as windows terminal
