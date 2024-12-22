@@ -6,7 +6,7 @@ set.clipboard = "unnamedplus"
 require("nvim-tree").setup({
   view = { side = "right" }
 })
-vim.g.vscode_snippets_path = "./lua/snippets"
+
 
 local highlight_group = vim.api.nvim_create_augroup(
   'YankHighlight', { clear = true })

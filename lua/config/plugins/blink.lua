@@ -2,7 +2,9 @@ return {
   {
     'saghen/blink.cmp',
     -- optional: provides snippets for the snippet source
-    dependencies = 'rafamadriz/friendly-snippets',
+    dependencies = {
+      'rafamadriz/friendly-snippets',
+    },
     version = 'v0.*',
 
     ---@module 'blink.cmp'
@@ -15,7 +17,25 @@ return {
         nerd_font_variant = 'normal'
       },
       -- experimental signature help support
-      signature = { enabled = true }
+      signature = { enabled = true },
+      completion = {
+        accept = { auto_brackets = { enabled = false }, },
+        list = { selection = 'auto_insert' },
+        menu = {
+          draw = {
+            columns = {
+              { "label",     "label_description", gap = 1 },
+              { "kind_icon", "kind" }
+            },
+          }
+        },
+
+        -- Show documentation when selecting a completion item
+        documentation = { auto_show = true, auto_show_delay_ms = 500 },
+
+        -- Display a preview of the selected item on the current line
+        ghost_text = { enabled = false },
+      },
     },
   }
 }
