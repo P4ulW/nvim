@@ -94,21 +94,22 @@ return {
         pyright = {
           filetype = { "python" }
         },
+
         clangd = {
           filetype = { "c" }
         },
-        bacon_ls = {
-          settings = {
 
-            filetype = { "rust", "rs" },
-            init_options = {
-              spawnBacon = true,
-              spawnBaconCommand = "bacon clippy -- --all-features",
-              updateOnSave = true,
-            },
+        rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              diagnostics = {
+                enable = true,
+              }
+            }
           }
-        }
-      }
+        },
+
+      },
     },
 
 
