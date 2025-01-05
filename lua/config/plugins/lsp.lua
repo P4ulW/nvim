@@ -47,6 +47,7 @@ M.on_attach = function(_, bufnr)
   map("n", "<space>sh", vim.lsp.buf.signature_help, opts "Show signature help")
   map("n", "<space>wa", vim.lsp.buf.add_workspace_folder, opts "Add workspace folder")
   map("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, opts "Remove workspace folder")
+  map("n", "<space>df", vim.diagnostic.open_float, opts "Show diagnostic float")
   map("n", "<space>ra", renamer, opts "Rename")
 
   map("n", "<space>wl", function()
