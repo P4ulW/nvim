@@ -1,6 +1,8 @@
 local set = vim.opt
 local map = vim.keymap.set
 set.clipboard = "unnamedplus"
+set.grepprg = "rg --vimgrep"
+set.grepformat = "%f:%l:%c:%m"
 
 
 require("nvim-tree").setup({
