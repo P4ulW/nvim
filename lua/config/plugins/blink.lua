@@ -5,7 +5,7 @@ return {
     dependencies = {
       'rafamadriz/friendly-snippets',
     },
-    version = 'v0.*',
+    version = '*',
 
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
@@ -20,7 +20,8 @@ return {
       signature = { enabled = true },
       completion = {
         accept = { auto_brackets = { enabled = false }, },
-        list = { selection = 'auto_insert' },
+        list = { selection = { preselect = true, auto_insert = true } },
+
         menu = {
           draw = {
             columns = {
@@ -34,7 +35,7 @@ return {
         documentation = { auto_show = true, auto_show_delay_ms = 500 },
 
         -- Display a preview of the selected item on the current line
-        ghost_text = { enabled = false },
+        ghost_text = { enabled = true },
       },
     },
   }
