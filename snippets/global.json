@@ -1,8 +1,11 @@
 {
+    
+
+    
 	"inverse angstrom str": {
 		"prefix": "inverse_angstrom",
 		"body": [
-			"$\\mathrm{\\AA}^{-1}$"
+			"\\mathrm{\\AA}^{-1}"
 		],
 		"description": "inverse angstrom for latex and python"
 	}

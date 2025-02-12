@@ -7,15 +7,7 @@
 		"description": "fstring formatting"
   },
 
-	"inverse angstrom str": {
-		"prefix": "inverse_angstrom",
-		"body": [
-			"$\\mathrm{\\AA}^{-1}$"
-		],
-		"description": "Log output to console"
-	},
-
-	"Create a cbar inset for mpl figure": {
+   "Create a cbar inset for mpl figure": {
 		"prefix": "cbar_ax_inset",
 		"body": [
 			"${1:ax_name} = ${2:target_ax}.inset_axes([${3:x0}, ${4:y0}, ${5:dx}, ${6:dy}])",
