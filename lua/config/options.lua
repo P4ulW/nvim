@@ -67,7 +67,7 @@ set.spelllang      = "en"
 set.relativenumber = true
 set.breakindent    = true
 set.showbreak      = '...'
-set.signcolumn     = 'yes:2'
+set.signcolumn     = 'yes:1'
 set.colorcolumn    = '80'
 
 
