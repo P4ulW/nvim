@@ -1,0 +1,23 @@
+{
+	"red text": {
+		"prefix": "red_text",
+		"body": [
+			"\\textcolor{red}{$text}"
+		],
+		"description": "make a red text field"
+	},
+	"blue text": {
+		"prefix": "blue_text",
+		"body": [
+			"\\textcolor{blue}{$text}"
+		],
+		"description": "make a blue text field"
+	},
+	"\textcolor": {
+		"prefix": "textcolor",
+		"body": [
+			"\\textcolor{$color}{$text}"
+		],
+		"description": "make a colored text field"
+	}
+}
