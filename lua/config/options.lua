@@ -72,7 +72,19 @@ set.colorcolumn    = '80'
 
 
 -- set pwsh as windows terminal
-local is_windows = vim.fn.environ()['OS'] == 'Windows_NT'
-if is_windows then
-  set.shell = 'pwsh'
+if vim.g.neovide then
+  local is_windows = vim.fn.environ()['OS'] == 'Windows_NT'
+  if is_windows then
+    set.shell = 'pwsh'
+  end
+
+  -- neovide
+  vim.o.guifont = "MonaspiceAr Nerd Font:h13" -- text below applies for VimScript
+
+  local alpha = function()
+    return string.format("%x", math.floor(255 * vim.g.transparency or 0.8))
+  end
+  vim.g.neovide_opacity = 0.0
+  vim.g.transparency = 0.8
+  vim.g.neovide_background_color = "#0f1117" .. alpha()
 end
