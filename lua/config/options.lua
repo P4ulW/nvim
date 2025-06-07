@@ -58,7 +58,7 @@ map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "nvimtree focus window"
 
 
 -- floaterminal
-map({ 'n', 't' }, "<A-f>", "<cmd>Floaterminal<CR>", { desc = "toggle floaterminal" })
+map({ 'n', 't' }, "<A-i>", "<cmd>Floaterminal<CR>", { desc = "toggle floaterminal" })
 
 map({ "n" }, "<C-u>", "<C-u>zz")
 map({ "n" }, "<C-d>", "<C-d>zz")
