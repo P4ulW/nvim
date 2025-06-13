@@ -81,7 +81,7 @@ if vim.g.neovide then
   end
 
   -- neovide
-  vim.o.guifont = "MonaspiceAr Nerd Font:h13" -- text below applies for VimScript
+  vim.o.guifont = "IosevkaMenlo Nerd Font:h13" -- text below applies for VimScript
 
   local alpha = function()
     return string.format("%x", math.floor(255 * vim.g.transparency or 0.8))
