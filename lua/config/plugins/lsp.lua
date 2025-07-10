@@ -92,9 +92,11 @@ return {
             },
           },
         },
+
         pyright = {
           filetype = { "python" }
         },
+
         ruff = {
           filetype = { "python" },
           init_options = {
@@ -108,6 +110,15 @@ return {
         clangd = {
           filetype = { "c" }
         },
+
+        -- tinymist = {
+        --   settings = {
+        --     formatterMode = "typstyle",
+        --     exportPdf = "never",
+        --     offset_encoding = "utf-8",
+        --     semantic_token = "disable",
+        --   }
+        -- },
 
         rust_analyzer = {
           settings = {

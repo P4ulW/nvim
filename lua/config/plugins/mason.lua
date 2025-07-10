@@ -9,7 +9,8 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "pyright",
-          "lua_ls"
+          "lua_ls",
+          "tinymist",
         }
       })
     end,

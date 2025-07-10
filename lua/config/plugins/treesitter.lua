@@ -14,6 +14,7 @@ return {
           "csv",
           "rust",
           "markdown",
+          "typst"
           -- "latex",
         },
         autoinstall = false,
