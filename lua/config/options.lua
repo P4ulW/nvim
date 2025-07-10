@@ -124,6 +124,12 @@ map("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
 set.showtabline = 1 -- Always show tabline (0=never, 1=when multiple tabs, 2=always)
 set.tabline = ''    -- Use default tabline (empty string uses built-in)
 
+-- Create undo directory if it doesn't exist
+local undodir = vim.fn.expand("~/.vim/undodir")
+if vim.fn.isdirectory(undodir) == 0 then
+  vim.fn.mkdir(undodir, "p")
+end
+
 -- set pwsh as windows terminal
 if vim.g.neovide then
   local is_windows = vim.fn.environ()['OS'] == 'Windows_NT'
