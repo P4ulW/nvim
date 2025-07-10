@@ -88,7 +88,7 @@ map({ "n", "t" }, "<C-h>", "<C-w>h", { desc = "switch window left" })
 map({ "n", "t" }, "<C-l>", "<C-w>l", { desc = "switch window right" })
 map({ "n", "t" }, "<C-j>", "<C-w>j", { desc = "switch window down" })
 map({ "n", "t" }, "<C-k>", "<C-w>k", { desc = "switch window up" })
-map({ "n" }, "<space>x", "<cmd>bunload <CR>", { desc = "unload current buffer" })
+map({ "n" }, "<leader>x", "<cmd>bunload <CR>", { desc = "unload current buffer" })
 
 -- highlight clearing for searching etc.
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
