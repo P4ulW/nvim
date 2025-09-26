@@ -4,13 +4,13 @@ local renamer = function()
   local api = vim.api
   local var = vim.fn.expand "<cword>"
   local buf = api.nvim_create_buf(false, true)
-  local opts = { height = 1, style = "minimal", border = "rounded", row = 1, col = 1 }
+  local opts = { height = 1, style = "minimal", border = "single", row = 1, col = 1 }
 
   opts.relative, opts.width = "cursor", #var + 15
   opts.title, opts.title_pos = { { " Rename ", "@comment.danger" } }, "center"
 
   local win = api.nvim_open_win(buf, true, opts)
-  vim.wo[win].winhl = "Normal:Normal,FloatBorder:Removed"
+  vim.wo[win].winhl = "Normal:Normal,FloatBorder:Single"
   api.nvim_set_current_win(win)
 
   api.nvim_buf_set_lines(buf, 0, -1, true, { " " .. var })
@@ -47,7 +47,7 @@ M.on_attach = function(_, bufnr)
   map("n", "<space>sh", vim.lsp.buf.signature_help, opts "Show signature help")
   map("n", "<space>wa", vim.lsp.buf.add_workspace_folder, opts "Add workspace folder")
   map("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, opts "Remove workspace folder")
-  map("n", "<space>df", vim.diagnostic.open_float, opts "Show diagnostic float")
+  map("n", "<space>df", function() vim.diagnostic.open_float { border = "single" } end, opts "Show diagnostic float")
   map("n", "<space>ra", renamer, opts "Rename")
 
   map("n", "<space>wl", function()
@@ -93,7 +93,7 @@ return {
           },
         },
 
-        pyright = {
+        basedpyright = {
           filetype = { "python" }
         },
 
@@ -102,7 +102,7 @@ return {
           init_options = {
             settings = {
               lineLength = 80,
-              lint = { enable = false },
+              lint = { enable = true },
             }
           },
         },
