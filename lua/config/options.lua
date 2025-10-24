@@ -75,6 +75,24 @@ vim.api.nvim_create_autocmd({ "TermOpen", "BufEnter" }, {
   end
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "tex",
+  callback = function()
+    vim.opt_local.formatprg = "latexindent -m -l ~/.config/latexindent/localSettings.yaml -"
+  end,
+})
+
+-- NOTE: The BufWritePre autocmd is not included here but is required to run the formatting.
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.tex",
+  callback = function()
+    local view = vim.fn.winsaveview()
+    vim.cmd('normal! gggqG')
+    vim.fn.winrestview(view)
+  end,
+})
+
 -- insert mode nav
 map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
 map("i", "<C-e>", "<End>", { desc = "move end of line" })

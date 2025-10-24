@@ -15,6 +15,7 @@ return {
           "rust",
           "markdown",
           "typst",
+          "zig",
           "latex"
           -- "latex",
         },
