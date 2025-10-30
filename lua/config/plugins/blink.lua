@@ -28,7 +28,9 @@ return {
         list = { selection = { preselect = true, auto_insert = true } },
 
         menu = {
+          border = "rounded",
           draw = {
+
             columns = {
               { "label",     "label_description", gap = 1 },
               { "kind_icon", "kind" }

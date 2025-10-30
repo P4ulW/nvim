@@ -11,6 +11,7 @@ set.breakindent    = true
 set.showbreak      = '...'
 set.signcolumn     = 'yes:1'
 set.colorcolumn    = '80'
+set.winborder      = "rounded"
 
 -- indentation
 set.shiftwidth     = 4
