@@ -53,7 +53,7 @@ map("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
 map("n", "<space>sh", vim.lsp.buf.signature_help, { desc = "Show signature help" })
 map("n", "<space>wa", vim.lsp.buf.add_workspace_folder, { desc = "Add workspace folder" })
 map("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, { desc = "Remove workspace folder" })
-map("n", "<space>df", vim.diagnostic.open_float, { desc = "Show diagnostic float" })
+map("n", "<space>df", function() vim.diagnostic.open_float { border = "rounded" } end, { desc = "Show diagnostic float" })
 
 map("n", "<space>wl", function()
   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
