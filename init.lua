@@ -1,6 +1,9 @@
 vim.loader.enable()
 require("config.lazy")
-require("config.options")
+require("options.options")
+require("options.mapping")
+require("options.groups")
+require("config.lsp")
 require("custom.floaterminal")
 
 vim.g.vscode_snippets_path = "./lua/snippets"

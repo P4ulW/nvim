@@ -18,6 +18,11 @@ return {
       },
       -- experimental signature help support
       signature = { enabled = true },
+
+      sources = {
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
+      },
+
       completion = {
         accept = { auto_brackets = { enabled = false }, },
         list = { selection = { preselect = true, auto_insert = true } },
@@ -30,6 +35,7 @@ return {
             },
           }
         },
+
 
         -- Show documentation when selecting a completion item
         documentation = { auto_show = true, auto_show_delay_ms = 500 },
