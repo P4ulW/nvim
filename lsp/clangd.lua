@@ -7,7 +7,15 @@ return {
     '.clang-format',
     'compile_commands.json',
     'compile_flags.txt',
-    'configure.ac', -- AutoTools
+    'configure.ac',
     '.git',
+  },
+  capabilities = {
+    textDocument = {
+      completion = {
+        editsNearCursor = true,
+      },
+    },
+    offsetEncoding = { 'utf-8', 'utf-16' },
   },
 }
