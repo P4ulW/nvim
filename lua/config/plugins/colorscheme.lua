@@ -1,12 +1,12 @@
 -- return {
---     "slugbyte/lackluster.nvim",
---     lazy = false,
---     priority = 1000,
---     init = function()
---         vim.cmd.colorscheme("lackluster-dark")
---         -- vim.cmd.colorscheme("lackluster-hack") -- my favorite
---         -- vim.cmd.colorscheme("lackluster-mint")
---     end,
+--   "slugbyte/lackluster.nvim",
+--   lazy = false,
+--   priority = 1000,
+--   init = function()
+--     -- vim.cmd.colorscheme("lackluster-dark")
+--     vim.cmd.colorscheme("lackluster-hack") -- my favorite
+--     -- vim.cmd.colorscheme("lackluster-mint")
+--   end,
 -- }
 
 -- return {
@@ -34,27 +34,40 @@
 --   end
 -- }
 
-
 return {
-  "rose-pine/neovim",
-  name = "rose-pine",
-  config = function()
-    require("rose-pine").setup({
-      -- variant = "moon",
-      styles = {
-        italic = true,
-        transparency = true,
-      },
-      highlight_groups = {
-        ["@variable"] = { fg = "text", italic = false },
-        ["@variable.parameter"] = { fg = "iris", italic = true },
-        ["@property"] = { fg = "foam", italic = false },
-        ["@variable.builtin"] = { fg = "love", bold = false, italic = true },
-      },
-    })
-    vim.cmd("colorscheme rose-pine")
-  end
+  -- "metalelf0/black-metal-theme-neovim",
+  -- lazy = false,
+  -- priority = 1000,
+  -- config = function()
+  --   require("black-metal").setup({
+  --     -- optional configuration here
+  --     theme = "taake",
+  --     transparent = true,
+  --   })
+  --   require("black-metal").load()
+  -- end,
 }
+
+-- return {
+--   "rose-pine/neovim",
+--   name = "rose-pine",
+--   config = function()
+--     require("rose-pine").setup({
+--       -- variant = "moon",
+--       styles = {
+--         italic = true,
+--         transparency = true,
+--       },
+--       highlight_groups = {
+--         ["@variable"] = { fg = "text", italic = false },
+--         ["@variable.parameter"] = { fg = "iris", italic = true },
+--         ["@property"] = { fg = "foam", italic = false },
+--         ["@variable.builtin"] = { fg = "love", bold = false, italic = true },
+--       },
+--     })
+--     vim.cmd("colorscheme rose-pine")
+--   end
+-- }
 
 -- return {
 --   "catppuccin/nvim",
